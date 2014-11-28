@@ -7,9 +7,15 @@
 <div id="banner">
 	<div class="container">
 		<div class="copy">
-			<h1>{{ SITENAME }}</h1>
+			{% if BANNER_TITLE_FLAG %}
+				<h1>
+					{{ BANNER_TITLE }}
+				</h1>
+			{% endif %}
 			{% if BANNER_SUBTITLE %}
-				<p class="intro">{{ BANNER_SUBTITLE }}</p>
+				<p class="intro" style='margin-bottom:0px; margin-left:0px;'>
+					{{ BANNER_SUBTITLE }}
+				</p>
 			{% endif %}
 		</div>
 	</div>
